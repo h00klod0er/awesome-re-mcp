@@ -5,7 +5,7 @@
 > 范围：二进制逆向 / 反汇编 / 反编译 / 调试 / 动态插桩 / 符号执行相关的 MCP Server、Agent 插件与配套工具。  
 > 不含：通用编程助手、与 RE 无关的安全扫描器。
 
-> **统计说明（2026-09-21 UTC）**：`★` = GitHub Stars；`更新` = 仓库最近一次 `pushed_at`（推送）日期。PyPI-only 包无独立 star，会注明对应源码仓。
+> **统计说明（2026-09-21 UTC）**：`★` = GitHub Stars；`更新` = 仓库最近一次 `pushed_at`（推送）日期。由 [GitHub Actions](.github/workflows/update-stats.yml) 每周一自动刷新；也可在 Actions 页手动 Run workflow。PyPI-only 包无独立 star，会注明对应源码仓。
 
 ## 目录
 
