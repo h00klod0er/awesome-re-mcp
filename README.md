@@ -5,7 +5,7 @@
 > 范围：二进制逆向 / 反汇编 / 反编译 / 调试 / 动态插桩 / 符号执行相关的 MCP Server、Agent 插件与配套工具。  
 > 不含：通用编程助手、与 RE 无关的安全扫描器。
 
-> **统计说明（2026-09-21 UTC）**：`★` = GitHub Stars；`更新` = 仓库最近一次 `pushed_at`（推送）日期。由 [GitHub Actions](.github/workflows/update-stats.yml) 每周一自动刷新；也可在 Actions 页手动 Run workflow。PyPI-only 包无独立 star，会注明对应源码仓。
+> **统计说明（2026-09-21 06:18 UTC）**：`★` = GitHub Stars；`更新` = 仓库最近一次 `pushed_at`（推送）日期。由 [GitHub Actions](.github/workflows/update-stats.yml) 每周一自动刷新；也可手动 `workflow_dispatch`。PyPI-only 包无独立 star，会注明对应源码仓。
 
 ## 目录
 
@@ -32,7 +32,7 @@
 开源 **Windows 用户态调试器**（由 [mrexodia](https://github.com/mrexodia) 等维护）。  
 `x64dbg` 调试 64 位目标，`x32dbg` 调试 32 位目标；界面与插件体系相同，插件分别是 `.dp64` / `.dp32`。  
 强项：动态调试、断点、内存/寄存器、脚本与庞大插件生态；弱项：静态反编译不如 IDA/Ghidra/BN。  
-源码：[x64dbg/x64dbg](https://github.com/x64dbg/x64dbg) · ★49,567 · 更新 2026-09-19
+源码：[x64dbg/x64dbg](https://github.com/x64dbg/x64dbg) · ★49,566 · 更新 2026-09-19
 
 ### [IDA Pro](https://hex-rays.com/ida-pro/)
 
@@ -81,11 +81,11 @@ MCP 通常封装 DbgEng / dbgsrv / Preview 工具链。
 
 | 项目 | ★ | 更新 | 说明 | 备注 |
 |------|--:|------|------|------|
-| [Wasdubya/x64dbgMCP](https://github.com/Wasdubya/x64dbgMCP) | 559 | 2026-06-05 | 早期流行方案：插件 + Python MCP，40+ SDK 工具 | 同时支持 x64/x32；Claude / Cursor 常用 |
-| [SetsunaYukiOvO/x64dbg-mcp](https://github.com/SetsunaYukiOvO/x64dbg-mcp) | 480 | 2026-08-21 | 完整 MCP（约 79 tools + resources + prompts） | Streamable HTTP `/mcp` + 旧版 SSE；`.dp64`/`.dp32` |
-| [bromoket/x64dbg_mcp](https://github.com/bromoket/x64dbg_mcp) | 124 | 2026-06-08 | C++ 插件 REST（约 153 端点）+ npm stdio MCP | 默认 `127.0.0.1:27042`；`npx -y x64dbg-mcp-server` |
-| [john-mayhem/x32dbgMCP](https://github.com/john-mayhem/x32dbgMCP) | 11 | 2025-11-09 | 偏 x32dbg 的 MCP（48+ tools） | 架构类似：Python MCP ↔ 插件 HTTP |
-| [ouonet/x64dbg-mcp](https://github.com/ouonet/x64dbg-mcp) | 5 | 2026-05-30 | Node MCP：stdio / Streamable HTTP，可自动拉起调试器 | 按 PE 架构选 x32/x64；`npm i -g x64dbg-mcp` |
+| [Wasdubya/x64dbgMCP](https://github.com/Wasdubya/x64dbgMCP) | 559| 2026-06-05| 早期流行方案：插件 + Python MCP，40+ SDK 工具 | 同时支持 x64/x32；Claude / Cursor 常用 |
+| [SetsunaYukiOvO/x64dbg-mcp](https://github.com/SetsunaYukiOvO/x64dbg-mcp) | 480| 2026-08-21| 完整 MCP（约 79 tools + resources + prompts） | Streamable HTTP `/mcp` + 旧版 SSE；`.dp64`/`.dp32` |
+| [bromoket/x64dbg_mcp](https://github.com/bromoket/x64dbg_mcp) | 124| 2026-06-08| C++ 插件 REST（约 153 端点）+ npm stdio MCP | 默认 `127.0.0.1:27042`；`npx -y x64dbg-mcp-server` |
+| [john-mayhem/x32dbgMCP](https://github.com/john-mayhem/x32dbgMCP) | 11| 2025-11-09| 偏 x32dbg 的 MCP（48+ tools） | 架构类似：Python MCP ↔ 插件 HTTP |
+| [ouonet/x64dbg-mcp](https://github.com/ouonet/x64dbg-mcp) | 5| 2026-05-30| Node MCP：stdio / Streamable HTTP，可自动拉起调试器 | 按 PE 架构选 x32/x64；`npm i -g x64dbg-mcp` |
 
 ---
 
@@ -95,9 +95,9 @@ MCP 通常封装 DbgEng / dbgsrv / Preview 工具链。
 
 | 项目 | ★ | 更新 | 说明 | 备注 |
 |------|--:|------|------|------|
-| [jtsylve/re-mcp](https://github.com/jtsylve/re-mcp) (`re-mcp-ida`) | 159 | 2026-09-18 | 无头多后端 MCP；IDA/Ghidra 共用工具面 | 原 `ida-mcp`；IDA Pro 9+ / idalib |
-| [HexRaysSA/ida-mcp](https://github.com/HexRaysSA/ida-mcp) | 26 | 2026-09-20 | Hex-Rays 官方实验性 IDA MCP | IDA 9.4+；建议关掉其它 IDA MCP |
-| [AriusII/ida-pro-mcp](https://github.com/AriusII/ida-pro-mcp) | 0 | 2026-06-25 | 静态分析 + 可选 live debugger（`?ext=dbg`） | 工具分 READ/WRITE/EXECUTE 安全级别 |
+| [jtsylve/re-mcp](https://github.com/jtsylve/re-mcp) (`re-mcp-ida`) | 159| 2026-09-18| 无头多后端 MCP；IDA/Ghidra 共用工具面 | 原 `ida-mcp`；IDA Pro 9+ / idalib |
+| [HexRaysSA/ida-mcp](https://github.com/HexRaysSA/ida-mcp) | 26| 2026-09-20| Hex-Rays 官方实验性 IDA MCP | IDA 9.4+；建议关掉其它 IDA MCP |
+| [AriusII/ida-pro-mcp](https://github.com/AriusII/ida-pro-mcp) | 0| 2026-06-25| 静态分析 + 可选 live debugger（`?ext=dbg`） | 工具分 READ/WRITE/EXECUTE 安全级别 |
 
 ---
 
@@ -107,11 +107,11 @@ MCP 通常封装 DbgEng / dbgsrv / Preview 工具链。
 
 | 项目 | ★ | 更新 | 说明 | 备注 |
 |------|--:|------|------|------|
-| [LaurieWired/GhidraMCP](https://github.com/LaurieWired/GhidraMCP) | 10,135 | 2025-06-23 | 社区热门 Ghidra MCP（插件 + HTTP） | 交互式 GUI 工作流常用 |
-| [bethington/ghidra-mcp](https://github.com/bethington/ghidra-mcp) | 3,932 | 2026-09-19 | 大规模工具集（约 110 tools） | LaurieWired 生态相关扩展 |
-| [jtsylve/re-mcp](https://github.com/jtsylve/re-mcp) (`re-mcp-ghidra`) | 159 | 2026-09-18 | Ghidra 无头后端（pyghidra）；PyPI: `re-mcp-ghidra` | Ghidra 12+、JDK 21+ |
-| [themixednuts/GhidraMCP](https://github.com/themixednuts/GhidraMCP) | 81 | 2026-06-12 | 分析 + Trace RMI 调试相关能力 | 需较新 Ghidra（文档写 12.1） |
-| [wooyunsec/ghidra-headless-mcp](https://github.com/wooyunsec/ghidra-headless-mcp) | 0 | 2026-07-25 | 无头 Ghidra MCP（大量工具组） | 适合 Agent / CI |
+| [LaurieWired/GhidraMCP](https://github.com/LaurieWired/GhidraMCP) | 10,135| 2025-06-23| 社区热门 Ghidra MCP（插件 + HTTP） | 交互式 GUI 工作流常用 |
+| [bethington/ghidra-mcp](https://github.com/bethington/ghidra-mcp) | 3,932| 2026-09-19| 大规模工具集（约 110 tools） | LaurieWired 生态相关扩展 |
+| [jtsylve/re-mcp](https://github.com/jtsylve/re-mcp) (`re-mcp-ghidra`) | 159| 2026-09-18| Ghidra 无头后端（pyghidra）；PyPI: `re-mcp-ghidra` | Ghidra 12+、JDK 21+ |
+| [themixednuts/GhidraMCP](https://github.com/themixednuts/GhidraMCP) | 81| 2026-06-12| 分析 + Trace RMI 调试相关能力 | 需较新 Ghidra（文档写 12.1） |
+| [wooyunsec/ghidra-headless-mcp](https://github.com/wooyunsec/ghidra-headless-mcp) | 0| 2026-07-25| 无头 Ghidra MCP（大量工具组） | 适合 Agent / CI |
 
 ---
 
@@ -121,9 +121,9 @@ MCP 通常封装 DbgEng / dbgsrv / Preview 工具链。
 
 | 项目 | ★ | 更新 | 说明 | 备注 |
 |------|--:|------|------|------|
-| [fosdickio/binary_ninja_mcp](https://github.com/fosdickio/binary_ninja_mcp) | 438 | 2026-04-05 | BN 插件 + MCP bridge | Cursor / Claude / Cline 等可自动配置 |
-| [mrphrazer/binary-ninja-headless-mcp](https://github.com/mrphrazer/binary-ninja-headless-mcp) | 244 | 2026-09-19 | 无头 BN MCP（约 180+ tools） | Agent 深度分析 |
-| [symgraph/BinAssistMCP](https://github.com/symgraph/BinAssistMCP) | 50 | 2026-09-20 | BN 插件 MCP（SSE / Streamable HTTP） | 原 `jtang613/BinAssistMCP`；多 binary 会话 |
+| [fosdickio/binary_ninja_mcp](https://github.com/fosdickio/binary_ninja_mcp) | 438| 2026-04-05| BN 插件 + MCP bridge | Cursor / Claude / Cline 等可自动配置 |
+| [mrphrazer/binary-ninja-headless-mcp](https://github.com/mrphrazer/binary-ninja-headless-mcp) | 244| 2026-09-19| 无头 BN MCP（约 180+ tools） | Agent 深度分析 |
+| [symgraph/BinAssistMCP](https://github.com/symgraph/BinAssistMCP) | 50| 2026-09-20| BN 插件 MCP（SSE / Streamable HTTP） | 原 `jtang613/BinAssistMCP`；多 binary 会话 |
 
 ---
 
@@ -133,8 +133,8 @@ MCP 通常封装 DbgEng / dbgsrv / Preview 工具链。
 
 | 项目 | ★ | 更新 | 说明 | 备注 |
 |------|--:|------|------|------|
-| [radareorg/radare2-mcp](https://github.com/radareorg/radare2-mcp) | 308 | 2026-09-16 | 官方 radare2 MCP | `r2pm` 安装；stdio / HTTP |
-| [jtsylve/re-mcp](https://github.com/jtsylve/re-mcp) | 159 | 2026-09-18 | IDA + Ghidra 统一接口 | 后续后端可扩展 |
+| [radareorg/radare2-mcp](https://github.com/radareorg/radare2-mcp) | 308| 2026-09-16| 官方 radare2 MCP | `r2pm` 安装；stdio / HTTP |
+| [jtsylve/re-mcp](https://github.com/jtsylve/re-mcp) | 159| 2026-09-18| IDA + Ghidra 统一接口 | 后续后端可扩展 |
 
 ---
 
@@ -144,7 +144,7 @@ MCP 通常封装 DbgEng / dbgsrv / Preview 工具链。
 
 | 项目 | ★ | 更新 | 说明 | 备注 |
 |------|--:|------|------|------|
-| [hzmslx/windbg-mcp](https://github.com/hzmslx/windbg-mcp) | 0 | 2026-05-19 | DbgEng + 可选 Frida / dbgsrv / TTD / VM 控制 | 用户态 + 内核；约 29 tools |
+| [hzmslx/windbg-mcp](https://github.com/hzmslx/windbg-mcp) | 0| 2026-05-19| DbgEng + 可选 Frida / dbgsrv / TTD / VM 控制 | 用户态 + 内核；约 29 tools |
 
 ---
 
@@ -154,7 +154,7 @@ MCP 通常封装 DbgEng / dbgsrv / Preview 工具链。
 
 | 项目 | ★ | 更新 | 说明 | 备注 |
 |------|--:|------|------|------|
-| [majimboo/rexd-frida-mcp](https://github.com/majimboo/rexd-frida-mcp) | 1 | 2026-04-05 | Frida 动态插桩 MCP（attach/hook/读写内存） | stdio；偏 Windows 研究向工作流 |
+| [majimboo/rexd-frida-mcp](https://github.com/majimboo/rexd-frida-mcp) | 1| 2026-04-05| Frida 动态插桩 MCP（attach/hook/读写内存） | stdio；偏 Windows 研究向工作流 |
 
 ---
 
@@ -164,7 +164,7 @@ MCP 通常封装 DbgEng / dbgsrv / Preview 工具链。
 
 | 项目 | ★ | 更新 | 说明 | 备注 |
 |------|--:|------|------|------|
-| [sandbornm/angr_mcp](https://github.com/sandbornm/angr_mcp) | 5 | 2026-06-23 | angr-management 插件内嵌 MCP | CFG / 符号执行 / 与 GUI 同步 |
+| [sandbornm/angr_mcp](https://github.com/sandbornm/angr_mcp) | 5| 2026-06-23| angr-management 插件内嵌 MCP | CFG / 符号执行 / 与 GUI 同步 |
 
 ---
 
@@ -172,8 +172,8 @@ MCP 通常封装 DbgEng / dbgsrv / Preview 工具链。
 
 | 项目 | ★ | 更新 | 说明 |
 |------|--:|------|------|
-| [x64dbg/x64dbg](https://github.com/x64dbg/x64dbg) | 49,567 | 2026-09-19 | x64dbg / x32dbg 本体 |
-| [vector35/warp](https://github.com/vector35/warp) | 67 | 2025-11-05 | Binary Ninja WARP（函数匹配 / 迁移） |
+| [x64dbg/x64dbg](https://github.com/x64dbg/x64dbg) | 49,566| 2026-09-19| x64dbg / x32dbg 本体 |
+| [vector35/warp](https://github.com/vector35/warp) | 67| 2025-11-05| Binary Ninja WARP（函数匹配 / 迁移） |
 | [MCP](https://modelcontextprotocol.io/) | — | — | Model Context Protocol 规范 |
 
 ---
