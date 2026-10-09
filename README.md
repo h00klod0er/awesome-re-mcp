@@ -135,6 +135,7 @@ MCP 通常封装 DbgEng / dbgsrv / Preview 工具链。
 |------|--:|------|------|------|
 | [radareorg/radare2-mcp](https://github.com/radareorg/radare2-mcp) | 313| 2026-10-05| 官方 radare2 MCP | `r2pm` 安装；stdio / HTTP |
 | [jtsylve/re-mcp](https://github.com/jtsylve/re-mcp) | 167| 2026-09-18| IDA + Ghidra 统一接口 | 后续后端可扩展 |
+| [morluto/rea](https://github.com/morluto/rea) | 37,833 | 2026-10-09 | 本地 CLI 与 MCP：Agent 辅助原生程序分析，保留证据来源与未知项 | stdio；原生深度分析需自备 Hopper、Ghidra 或 IDA；Ghidra 无头分析 |
 
 ---
 
